@@ -12,6 +12,8 @@
 		AEAF9B4E1C5F3C0A00053832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAF9B4C1C5F3C0A00053832 /* Main.storyboard */; };
 		AEAF9B501C5F3C0A00053832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAF9B4F1C5F3C0A00053832 /* Assets.xcassets */; };
 		AEAF9B531C5F3C0A00053832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAF9B511C5F3C0A00053832 /* LaunchScreen.storyboard */; };
+		AEAF9B5B1C5F4A8800053832 /* NSCoding&Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF9B5A1C5F4A8800053832 /* NSCoding&Archive.swift */; };
+		AEAF9B5D1C5F5F3E00053832 /* SerializationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF9B5C1C5F5F3E00053832 /* SerializationExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AEAF9B4F1C5F3C0A00053832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEAF9B521C5F3C0A00053832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEAF9B541C5F3C0A00053832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEAF9B5A1C5F4A8800053832 /* NSCoding&Archive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding&Archive.swift"; sourceTree = "<group>"; };
+		AEAF9B5C1C5F5F3E00053832 /* SerializationExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				AEAF9B4F1C5F3C0A00053832 /* Assets.xcassets */,
 				AEAF9B511C5F3C0A00053832 /* LaunchScreen.storyboard */,
 				AEAF9B541C5F3C0A00053832 /* Info.plist */,
+				AEAF9B5A1C5F4A8800053832 /* NSCoding&Archive.swift */,
+				AEAF9B5C1C5F5F3E00053832 /* SerializationExample.swift */,
 			);
 			path = TestiOSPersistence;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAF9B5B1C5F4A8800053832 /* NSCoding&Archive.swift in Sources */,
 				AEAF9B4B1C5F3C0A00053832 /* ViewController.swift in Sources */,
 				AEAF9B491C5F3C0A00053832 /* AppDelegate.swift in Sources */,
+				AEAF9B5D1C5F5F3E00053832 /* SerializationExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				AEAF9B591C5F3C0A00053832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
