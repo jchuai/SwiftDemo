@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE8AE1991C6337EB00BEB9DC /* SqliteExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE1981C6337EB00BEB9DC /* SqliteExample.swift */; };
+		AE8AE19B1C6337FB00BEB9DC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8AE19A1C6337FB00BEB9DC /* libsqlite3.0.tbd */; };
+		AE8DF9301C63452B003FD8AF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DF92F1C63452B003FD8AF /* ContactsViewController.swift */; };
+		AE8DF9321C634AAA003FD8AF /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DF9311C634AAA003FD8AF /* ContactsViewModel.swift */; };
 		AEAF9B491C5F3C0A00053832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF9B481C5F3C0A00053832 /* AppDelegate.swift */; };
 		AEAF9B4B1C5F3C0A00053832 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF9B4A1C5F3C0A00053832 /* ViewController.swift */; };
 		AEAF9B4E1C5F3C0A00053832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAF9B4C1C5F3C0A00053832 /* Main.storyboard */; };
@@ -17,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE8AE1981C6337EB00BEB9DC /* SqliteExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteExample.swift; sourceTree = "<group>"; };
+		AE8AE19A1C6337FB00BEB9DC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AE8AE19D1C6338EA00BEB9DC /* TestiOSPersistence-swift-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestiOSPersistence-swift-bridge.h"; sourceTree = "<group>"; };
+		AE8DF92F1C63452B003FD8AF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		AE8DF9311C634AAA003FD8AF /* ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		AEAF9B451C5F3C0A00053832 /* TestiOSPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOSPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAF9B481C5F3C0A00053832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEAF9B4A1C5F3C0A00053832 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +42,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8AE19B1C6337FB00BEB9DC /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE8AE19C1C63380700BEB9DC /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				AE8AE19A1C6337FB00BEB9DC /* libsqlite3.0.tbd */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		AEAF9B3C1C5F3C0A00053832 = {
 			isa = PBXGroup;
 			children = (
+				AE8AE19D1C6338EA00BEB9DC /* TestiOSPersistence-swift-bridge.h */,
 				AEAF9B471C5F3C0A00053832 /* TestiOSPersistence */,
 				AEAF9B461C5F3C0A00053832 /* Products */,
+				AE8AE19C1C63380700BEB9DC /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +86,9 @@
 				AEAF9B541C5F3C0A00053832 /* Info.plist */,
 				AEAF9B5A1C5F4A8800053832 /* NSCoding&Archive.swift */,
 				AEAF9B5C1C5F5F3E00053832 /* SerializationExample.swift */,
+				AE8AE1981C6337EB00BEB9DC /* SqliteExample.swift */,
+				AE8DF92F1C63452B003FD8AF /* ContactsViewController.swift */,
+				AE8DF9311C634AAA003FD8AF /* ContactsViewModel.swift */,
 			);
 			path = TestiOSPersistence;
 			sourceTree = "<group>";
@@ -144,7 +167,10 @@
 				AEAF9B5B1C5F4A8800053832 /* NSCoding&Archive.swift in Sources */,
 				AEAF9B4B1C5F3C0A00053832 /* ViewController.swift in Sources */,
 				AEAF9B491C5F3C0A00053832 /* AppDelegate.swift in Sources */,
+				AE8DF9321C634AAA003FD8AF /* ContactsViewModel.swift in Sources */,
 				AEAF9B5D1C5F5F3E00053832 /* SerializationExample.swift in Sources */,
+				AE8AE1991C6337EB00BEB9DC /* SqliteExample.swift in Sources */,
+				AE8DF9301C63452B003FD8AF /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +287,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.TestiOSPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestiOSPersistence-swift-bridge.h";
 			};
 			name = Debug;
 		};
@@ -272,6 +299,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.TestiOSPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestiOSPersistence-swift-bridge.h";
 			};
 			name = Release;
 		};

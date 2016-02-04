@@ -15,7 +15,7 @@ let rootDir : NSString = {
 class NSCodingArchiveExample {
     
     
-    func testArchiveObject() {
+    func testArchiveObject() -> String {
         let testPath = rootDir.stringByAppendingPathComponent("NSCodingArchiveExample_testArchiveObject.plist")
 
         let address = Address()
@@ -35,10 +35,12 @@ class NSCodingArchiveExample {
         
         if let object = NSKeyedUnarchiver.unarchiveObjectWithFile(testPath) as? User {
             print(object.description)
+            return object.description
         }
+        return ""
     }
     
-    func testArchiveList() {
+    func testArchiveList() -> String {
         let testPath = rootDir.stringByAppendingPathComponent("NSCodingArchiveExample_testArchiveList.plist")
 
         let address = Address()
@@ -51,11 +53,14 @@ class NSCodingArchiveExample {
         
         NSKeyedArchiver.archiveRootObject([address, address1], toFile: testPath)
 
+        var result = ""
         if let object = NSKeyedUnarchiver.unarchiveObjectWithFile(testPath) as? [Address] {
             for add in object {
                 print(add.description)
+                result += "\(add.description)\n"
             }
         }
+        return result
     }
 }
 
