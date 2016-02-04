@@ -13,7 +13,7 @@ private let statusBarHeight : CGFloat = UIApplication.sharedApplication().status
 
 class ViewController: UIViewController {
     
-    var people: [NSManagedObject] = []
+    var people: [Person] = []
     
     private var citys: Set<String> {
         var list = Set<String>()
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         let fetchRequst = NSFetchRequest(entityName: "Person")
         do {
-            if let results = try managedContext?.executeFetchRequest(fetchRequst) as? [NSManagedObject] {
+            if let results = try managedContext?.executeFetchRequest(fetchRequst) as? [Person] {
                 people = results
             }
             tableView.reloadData()
@@ -81,9 +81,11 @@ class ViewController: UIViewController {
     
     private func addFriendsWith(name: String, city: String) {
         if let entity = self.personEntity {
-            let person = NSManagedObject(entity: entity, insertIntoManagedObjectContext: self.managedContext)
-            person.setValue(name, forKey: "name")
-            person.setValue(city, forKey: "city")
+            let person = NSManagedObject(entity: entity, insertIntoManagedObjectContext: self.managedContext) as! Person
+            person.city = city
+            person.name = name
+//            person.setValue(name, forKey: "name")
+//            person.setValue(city, forKey: "city")
             self.people.append(person)
             self.tableView.reloadData()
             do {
@@ -104,7 +106,7 @@ class ViewController: UIViewController {
                     let predicate = NSPredicate(format: "%K == %@", "city", selectedCity)
                     request.predicate = predicate
                     do {
-                        if let results = try self?.managedContext?.executeFetchRequest(request) as? [NSManagedObject] {
+                        if let results = try self?.managedContext?.executeFetchRequest(request) as? [Person] {
                             self?.people = results
                         }
                         self?.tableView.reloadData()
@@ -116,10 +118,10 @@ class ViewController: UIViewController {
             alert.addAction(action)
         }
         
-        let cancel = UIAlertAction(title: "cancel", style: .Cancel, handler: { [weak self](action) -> Void in
+        let cancel = UIAlertAction(title: "全部", style: .Cancel, handler: { [weak self](action) -> Void in
             let request = NSFetchRequest(entityName: "Person")
             do {
-                if let results = try self?.managedContext?.executeFetchRequest(request) as? [NSManagedObject] {
+                if let results = try self?.managedContext?.executeFetchRequest(request) as? [Person] {
                     self?.people = results
                 }
                 self?.tableView.reloadData()
@@ -165,8 +167,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         if cell == nil {
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "CoreDataTestCell")
         }
-        cell?.textLabel?.text = people[indexPath.row].valueForKey("name") as? String
-        cell?.detailTextLabel?.text = people[indexPath.row].valueForKey("city") as? String
+        cell?.textLabel?.text = people[indexPath.row].name
+        cell?.detailTextLabel?.text = people[indexPath.row].city
         return cell!
     }
     

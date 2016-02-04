@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE43A36C1C62E7730089A673 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43A36B1C62E7730089A673 /* Person.swift */; };
 		AE714A441C61AD2C0090B5AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE714A431C61AD2C0090B5AA /* AppDelegate.swift */; };
 		AE714A461C61AD2C0090B5AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE714A451C61AD2C0090B5AA /* ViewController.swift */; };
 		AE714A491C61AD2C0090B5AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE714A471C61AD2C0090B5AA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE43A36B1C62E7730089A673 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AE714A401C61AD2C0090B5AA /* TestCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE714A431C61AD2C0090B5AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE714A451C61AD2C0090B5AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				AE714A4F1C61AD2C0090B5AA /* LaunchScreen.storyboard */,
 				AE714A521C61AD2C0090B5AA /* Info.plist */,
 				AE714A4A1C61AD2C0090B5AA /* TestCoreData.xcdatamodeld */,
+				AE43A36B1C62E7730089A673 /* Person.swift */,
 			);
 			path = TestCoreData;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				AE714A461C61AD2C0090B5AA /* ViewController.swift in Sources */,
 				AE714A4C1C61AD2C0090B5AA /* TestCoreData.xcdatamodeld in Sources */,
+				AE43A36C1C62E7730089A673 /* Person.swift in Sources */,
 				AE714A441C61AD2C0090B5AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +301,7 @@
 				AE714A571C61AD2C0090B5AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
