@@ -37,8 +37,8 @@ class SqlitePersonExample {
     }
     
     deinit {
-        if sqlite3_close(db) != SQLITE_OK {
-            print("Fail to close DB!")
+        if sqlite3_close_v2(db) != SQLITE_OK {
+            print(("Fail to close DB! \(String.fromCString(sqlite3_errmsg(db)))"))
         }
         db = nil
     }
