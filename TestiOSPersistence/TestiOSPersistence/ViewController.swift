@@ -12,13 +12,14 @@ let statusBarHeight : CGFloat = UIApplication.sharedApplication().statusBarFrame
 
 class ViewController: UIViewController {
     enum CellType {
-        case Archive, Serialization, SQLite
+        case Archive, Serialization, SQLite, Realm
     }
     
     private var dataSource : [(type:CellType, value:String)] = [
             (.Archive, "NSCoding&Archive Example"),
             (.Serialization, "Serialization Example"),
-            (.SQLite, "SQLite Example")
+            (.SQLite, "SQLite Example"),
+            (.Realm, "Realm Example")
         ]
 
     override func viewDidLoad() {
@@ -108,6 +109,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             showMessage(title, message: message)
         case .SQLite:
             let vc = ContactsViewController()
+            vc.type = .SQLite
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .Realm:
+            let vc = ContactsViewController()
+            vc.type = .Realm
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

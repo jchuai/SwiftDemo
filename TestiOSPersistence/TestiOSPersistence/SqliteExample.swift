@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SqlitePersonExample {
+class SqlitePersonExample : ContactsDataModelDelegate {
     lazy var documentDir : String = {
         return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last!
     }()

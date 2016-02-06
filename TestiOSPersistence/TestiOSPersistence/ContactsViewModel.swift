@@ -8,12 +8,21 @@
 
 import Foundation
 
+protocol ContactsDataModelDelegate: class {
+    func fetchAllPerson() -> [Person]
+    func insert(person: Person)
+}
+
 class ContactsViewModel {
+    weak var delegate : ContactsDataModelDelegate?
     private var dataSource : [Person] = []
-    private var sqliteTool = SqlitePersonExample(dbName: "Contacts.sqlite")
-    
+//    private var sqliteTool = SqlitePersonExample(dbName: "Contacts.sqlite")
+
+    init(delegate: ContactsDataModelDelegate?) {
+        self.delegate = delegate
+    }
     func loadDataModel() {
-        dataSource = sqliteTool?.fetchAllPerson() ?? []
+        dataSource = delegate?.fetchAllPerson() ?? []
     }
     
     func getPerson(index: Int) -> Person {
@@ -22,7 +31,7 @@ class ContactsViewModel {
     
     func insertPerson(person: Person) {
         dataSource.append(person)
-        sqliteTool?.insert(person)
+        delegate?.insert(person)
     }
     
     func personCount() -> Int {

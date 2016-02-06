@@ -10,7 +10,27 @@ import Foundation
 import UIKit
 
 class ContactsViewController: UIViewController {
-    var viewModel = ContactsViewModel()
+    enum StorageType {
+        case SQLite, CoreData, Realm
+    }
+    
+    var type: StorageType = .SQLite {
+        didSet {
+            switch type {
+            case .SQLite:
+                delegate = SqlitePersonExample(dbName: "Contacts.sqlite")
+            case .Realm:
+                delegate = RealmExample()
+            default:
+                break
+            }
+        }
+    }
+    private var delegate : ContactsDataModelDelegate?
+    private lazy var viewModel: ContactsViewModel = {
+        let viewModel = ContactsViewModel(delegate: self.delegate)
+        return viewModel
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

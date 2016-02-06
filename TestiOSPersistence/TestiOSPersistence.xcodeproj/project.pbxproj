@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CCD456C80A82B5571C9BF4F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDB5050FAAA4A191C277A21 /* Pods.framework */; };
 		AE8AE1991C6337EB00BEB9DC /* SqliteExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE1981C6337EB00BEB9DC /* SqliteExample.swift */; };
 		AE8AE19B1C6337FB00BEB9DC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8AE19A1C6337FB00BEB9DC /* libsqlite3.0.tbd */; };
+		AE8D16231C65C84A00BB4365 /* RealmExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D16221C65C84A00BB4365 /* RealmExample.swift */; };
 		AE8DF9301C63452B003FD8AF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DF92F1C63452B003FD8AF /* ContactsViewController.swift */; };
 		AE8DF9321C634AAA003FD8AF /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DF9311C634AAA003FD8AF /* ContactsViewModel.swift */; };
 		AEAF9B491C5F3C0A00053832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF9B481C5F3C0A00053832 /* AppDelegate.swift */; };
@@ -21,9 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EDC40E324DFAADE449975BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6FDB5050FAAA4A191C277A21 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		844F5855D21A047FFE529E4D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AE8AE1981C6337EB00BEB9DC /* SqliteExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteExample.swift; sourceTree = "<group>"; };
 		AE8AE19A1C6337FB00BEB9DC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AE8AE19D1C6338EA00BEB9DC /* TestiOSPersistence-swift-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestiOSPersistence-swift-bridge.h"; sourceTree = "<group>"; };
+		AE8D16221C65C84A00BB4365 /* RealmExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmExample.swift; sourceTree = "<group>"; };
 		AE8DF92F1C63452B003FD8AF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		AE8DF9311C634AAA003FD8AF /* ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		AEAF9B451C5F3C0A00053832 /* TestiOSPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOSPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,12 +49,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8AE19B1C6337FB00BEB9DC /* libsqlite3.0.tbd in Frameworks */,
+				7CCD456C80A82B5571C9BF4F /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0571D07C08D037BBE30BA414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FDB5050FAAA4A191C277A21 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32882554E64DB8CEB976D667 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EDC40E324DFAADE449975BA /* Pods.debug.xcconfig */,
+				844F5855D21A047FFE529E4D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE8AE19C1C63380700BEB9DC /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +88,8 @@
 				AEAF9B471C5F3C0A00053832 /* TestiOSPersistence */,
 				AEAF9B461C5F3C0A00053832 /* Products */,
 				AE8AE19C1C63380700BEB9DC /* Libraries */,
+				32882554E64DB8CEB976D667 /* Pods */,
+				0571D07C08D037BBE30BA414 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +115,7 @@
 				AE8AE1981C6337EB00BEB9DC /* SqliteExample.swift */,
 				AE8DF92F1C63452B003FD8AF /* ContactsViewController.swift */,
 				AE8DF9311C634AAA003FD8AF /* ContactsViewModel.swift */,
+				AE8D16221C65C84A00BB4365 /* RealmExample.swift */,
 			);
 			path = TestiOSPersistence;
 			sourceTree = "<group>";
@@ -100,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEAF9B571C5F3C0A00053832 /* Build configuration list for PBXNativeTarget "TestiOSPersistence" */;
 			buildPhases = (
+				EEAE89E93D358F1EC8AD9736 /* Check Pods Manifest.lock */,
 				AEAF9B411C5F3C0A00053832 /* Sources */,
 				AEAF9B421C5F3C0A00053832 /* Frameworks */,
 				AEAF9B431C5F3C0A00053832 /* Resources */,
+				CC0A649BCB7A3E823A10CDD6 /* Embed Pods Frameworks */,
+				55A6BA46BB94CE7066F4EA20 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +189,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55A6BA46BB94CE7066F4EA20 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0A649BCB7A3E823A10CDD6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEAE89E93D358F1EC8AD9736 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEAF9B411C5F3C0A00053832 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -166,6 +244,7 @@
 			files = (
 				AEAF9B5B1C5F4A8800053832 /* NSCoding&Archive.swift in Sources */,
 				AEAF9B4B1C5F3C0A00053832 /* ViewController.swift in Sources */,
+				AE8D16231C65C84A00BB4365 /* RealmExample.swift in Sources */,
 				AEAF9B491C5F3C0A00053832 /* AppDelegate.swift in Sources */,
 				AE8DF9321C634AAA003FD8AF /* ContactsViewModel.swift in Sources */,
 				AEAF9B5D1C5F5F3E00053832 /* SerializationExample.swift in Sources */,
@@ -281,6 +360,7 @@
 		};
 		AEAF9B581C5F3C0A00053832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EDC40E324DFAADE449975BA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestiOSPersistence/Info.plist;
@@ -293,6 +373,7 @@
 		};
 		AEAF9B591C5F3C0A00053832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844F5855D21A047FFE529E4D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestiOSPersistence/Info.plist;
