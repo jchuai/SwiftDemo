@@ -58,6 +58,21 @@ class CounterView: UIView {
         outlinePath.closePath()
         outlineColor.setStroke()
         outlinePath.stroke()
+        
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSaveGState(context)
+        outlineColor.setFill()
+        let markerWidth: CGFloat = 5.0
+        let markerHeight: CGFloat = 10.0
+        var markerPath = UIBezierPath(rect: CGRect(x: rect.width, y: rect.height / 2 - markerHeight / 2, width: markerHeight, height: markerWidth))
+        CGContextRotateCTM(context, PI / 4)
+        for i in 0 ..< maxCount {
+            CGContextSaveGState(context)
+//            let angel = PI / 4 + i * PI / 8
+//            CGContextRotateCTM(context, )
+            CGContextRestoreGState(context)
+        }
+        CGContextRestoreGState(context)
     }
     
     override init(frame: CGRect) {
