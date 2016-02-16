@@ -34,7 +34,8 @@ class CounterView: UIView {
     private let maxCount: Int = 8
     private let minAngel: CGFloat = 0.01
     private let PI : CGFloat = CGFloat(M_PI)
-    private let arcColor = UIColor(red: 69.0/255, green: 169.0/255, blue: 165.0/255, alpha: 1.0)
+//    private let arcColor = UIColor(red: 69.0/255, green: 169.0/255, blue: 165.0/255, alpha: 1.0)
+    private let arcColor = UIColor(red: 87.0/255, green: 218.0/255, blue: 213.0/255, alpha: 1.0)
     private let outlineColor = UIColor(red: 34.0/255, green: 110.0/255, blue: 100.0/255, alpha: 1.0)
     
     private var outlineStartAngle : CGFloat
@@ -64,12 +65,14 @@ class CounterView: UIView {
         outlineColor.setFill()
         let markerWidth: CGFloat = 5.0
         let markerHeight: CGFloat = 10.0
-        var markerPath = UIBezierPath(rect: CGRect(x: rect.width, y: rect.height / 2 - markerHeight / 2, width: markerHeight, height: markerWidth))
-        CGContextRotateCTM(context, PI / 4)
+        let markerPath = UIBezierPath(rect: CGRect(x: rect.width/2 - markerHeight, y: -markerWidth/2, width: markerHeight, height: markerWidth))
+        CGContextTranslateCTM(context, rect.width / 2, rect.height / 2)
+        let perAngel = 3 * PI / 16
         for i in 0 ..< maxCount {
             CGContextSaveGState(context)
-//            let angel = PI / 4 + i * PI / 8
-//            CGContextRotateCTM(context, )
+            let angel = PI / 4 - perAngel * CGFloat(i)
+            CGContextRotateCTM(context, angel)
+            markerPath.fill()
             CGContextRestoreGState(context)
         }
         CGContextRestoreGState(context)
