@@ -138,12 +138,6 @@ class GraphView: UIView {
         }
     }
     
-    private func protectDraw(context: CGContextRef?,drawContext: () -> Void) {
-        CGContextSaveGState(context)
-        drawContext()
-        CGContextRestoreGState(context)
-    }
-    
     private func columnXPoint(column: Int, width: CGFloat) -> CGFloat {
         let space = (width - self.margin * 2) / CGFloat(self.graphPoints.count - 1)
         let x : CGFloat = CGFloat(column) * space + margin
@@ -197,5 +191,13 @@ class GraphView: UIView {
         label.font = UIFont.systemFontOfSize(14)
         label.textColor = UIColor.whiteColor()
         return label
+    }
+}
+
+extension UIView {
+    func protectDraw(context: CGContextRef?,drawContext: () -> Void) {
+        CGContextSaveGState(context)
+        drawContext()
+        CGContextRestoreGState(context)
     }
 }

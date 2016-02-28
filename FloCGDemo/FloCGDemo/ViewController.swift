@@ -12,8 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.view.addSubview(backgroundView)
         self.view.addSubview(containerView)
+        self.view.addSubview(medal)
+        medal.showMedal(true)
         containerView.addSubview(counterView)
         graphView.graphPoints = [4, 2, 6, 4, 5, 8, 3]
 
@@ -28,6 +31,12 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        
+        backgroundView.width = self.view.width
+        backgroundView.height = self.view.height
+        backgroundView.top = 0.0
+        backgroundView.left = 0.0
+        
         let centerX  = self.view.width / 2
         
         containerView.centerX = centerX
@@ -35,6 +44,9 @@ class ViewController: UIViewController {
         counterView.centerX = containerView.width / 2
         counterView.centerY = containerView.height / 2
         graphView.center = counterView.center
+        
+        medal.top = containerView.bottom + 20
+        medal.left = 0.0
         
         plusButton.centerX = centerX
         plusButton.centerY = self.view.height / 2 + 100
@@ -63,6 +75,16 @@ class ViewController: UIViewController {
             })
     }
 
+    lazy var backgroundView: BackgroundView = {
+        let view = BackgroundView(frame: CGRectZero)
+        return view
+    }()
+    
+    lazy var medal: MedalImageView = {
+        let view = MedalImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 200))
+        return view
+    }()
+    
     lazy var plusButton: PushButton = {
         let button = PushButton(frame: CGRectMake(0, 0, 100, 100))
         button.addTarget(self, action: "plus", forControlEvents: .TouchUpInside)

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+let PI : CGFloat = CGFloat(M_PI)
+
 class CounterView: UIView {
     
     var counter : Int {
@@ -33,7 +35,6 @@ class CounterView: UIView {
     
     private let maxCount: Int = 8
     private let minAngel: CGFloat = 0.01
-    private let PI : CGFloat = CGFloat(M_PI)
 //    private let arcColor = UIColor(red: 69.0/255, green: 169.0/255, blue: 165.0/255, alpha: 1.0)
     private let arcColor = UIColor(red: 87.0/255, green: 218.0/255, blue: 213.0/255, alpha: 1.0)
     private let outlineColor = UIColor(red: 34.0/255, green: 110.0/255, blue: 100.0/255, alpha: 1.0)
