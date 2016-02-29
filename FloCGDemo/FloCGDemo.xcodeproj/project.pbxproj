@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE10CF1B1C83E9CB009A01FD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE10CF1A1C83E9CB009A01FD /* ViewModel.swift */; };
 		AE28403B1C82D54F00F3C59B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE28403A1C82D54F00F3C59B /* BackgroundView.swift */; };
 		AE28403D1C82E90900F3C59B /* MedalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE28403C1C82E90900F3C59B /* MedalImageView.swift */; };
 		AEDF73A01C716FDA009D376D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF739F1C716FDA009D376D /* AppDelegate.swift */; };
@@ -22,9 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE10CF1A1C83E9CB009A01FD /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		AE28403A1C82D54F00F3C59B /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		AE28403C1C82E90900F3C59B /* MedalImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalImageView.swift; sourceTree = "<group>"; };
-		AEDF739C1C716FDA009D376D /* FloCGDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloCGDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDF739C1C716FDA009D376D /* 八杯水.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "八杯水.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDF739F1C716FDA009D376D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEDF73A11C716FDA009D376D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEDF73A41C716FDA009D376D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE10CF171C83E775009A01FD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEDF73A11C716FDA009D376D /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AE10CF181C83E780009A01FD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AEDF73B41C7174E3009D376D /* PushButton.swift */,
+				AEDF73B61C717651009D376D /* UIView+Geometry.swift */,
+				AEDF73B81C719F5A009D376D /* CounterView.swift */,
+				AEDF73BC1C71B3B2009D376D /* GraphView.swift */,
+				AE28403A1C82D54F00F3C59B /* BackgroundView.swift */,
+				AE28403C1C82E90900F3C59B /* MedalImageView.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		AE10CF191C83E797009A01FD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AE10CF1A1C83E9CB009A01FD /* ViewModel.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		AEDF73931C716FDA009D376D = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +91,7 @@
 		AEDF739D1C716FDA009D376D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AEDF739C1C716FDA009D376D /* FloCGDemo.app */,
+				AEDF739C1C716FDA009D376D /* 八杯水.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,14 +108,9 @@
 		AEDF73BA1C71B2BF009D376D /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				AEDF739F1C716FDA009D376D /* AppDelegate.swift */,
-				AEDF73A11C716FDA009D376D /* ViewController.swift */,
-				AEDF73B41C7174E3009D376D /* PushButton.swift */,
-				AEDF73B61C717651009D376D /* UIView+Geometry.swift */,
-				AEDF73B81C719F5A009D376D /* CounterView.swift */,
-				AEDF73BC1C71B3B2009D376D /* GraphView.swift */,
-				AE28403A1C82D54F00F3C59B /* BackgroundView.swift */,
-				AE28403C1C82E90900F3C59B /* MedalImageView.swift */,
+				AE10CF191C83E797009A01FD /* model */,
+				AE10CF181C83E780009A01FD /* views */,
+				AE10CF171C83E775009A01FD /* controller */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -92,6 +118,7 @@
 		AEDF73BB1C71B2E4009D376D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEDF739F1C716FDA009D376D /* AppDelegate.swift */,
 				AEDF73A31C716FDA009D376D /* Main.storyboard */,
 				AEDF73A91C716FDA009D376D /* Assets.xcassets */,
 				AEDF73AB1C716FDA009D376D /* LaunchScreen.storyboard */,
@@ -118,7 +145,7 @@
 			);
 			name = FloCGDemo;
 			productName = FloCGDemo;
-			productReference = AEDF739C1C716FDA009D376D /* FloCGDemo.app */;
+			productReference = AEDF739C1C716FDA009D376D /* 八杯水.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -172,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE10CF1B1C83E9CB009A01FD /* ViewModel.swift in Sources */,
 				AEDF73A21C716FDA009D376D /* ViewController.swift in Sources */,
 				AEDF73A01C716FDA009D376D /* AppDelegate.swift in Sources */,
 				AE28403B1C82D54F00F3C59B /* BackgroundView.swift in Sources */,
@@ -294,9 +322,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FloCGDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.FloCGDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "八杯水";
 			};
 			name = Debug;
 		};
@@ -305,9 +334,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FloCGDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.FloCGDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "八杯水";
 			};
 			name = Release;
 		};

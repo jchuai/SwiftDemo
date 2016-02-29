@@ -13,7 +13,7 @@ let PI : CGFloat = CGFloat(M_PI)
 
 class CounterView: UIView {
     
-    var counter : Int {
+    var counter : Int16 {
         didSet {
             if counter > maxCount {
                 counter = maxCount
@@ -29,24 +29,24 @@ class CounterView: UIView {
             var plusAngel = CGFloat(counter) * 1.5 * PI / 8
             plusAngel = plusAngel < minAngel ? minAngel : plusAngel
             outlineEndAngle = outlineStartAngle + plusAngel
+            medal.showMedal(counter == 8)
             setNeedsDisplay()
         }
     }
     
-    private let maxCount: Int = 8
+    private let maxCount: Int16 = 8
     private let minAngel: CGFloat = 0.01
-//    private let arcColor = UIColor(red: 69.0/255, green: 169.0/255, blue: 165.0/255, alpha: 1.0)
     private let arcColor = UIColor(red: 87.0/255, green: 218.0/255, blue: 213.0/255, alpha: 1.0)
     private let outlineColor = UIColor(red: 34.0/255, green: 110.0/255, blue: 100.0/255, alpha: 1.0)
     
     private var outlineStartAngle : CGFloat
     private var outlineEndAngle : CGFloat
+    private let arcWidth: CGFloat = 76
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         let center = rect.center
         let radius = min(rect.width, rect.height) / 2
-        let arcWidth: CGFloat = 76
         let startAngle : CGFloat = 3 * PI / 4
         let endAngle : CGFloat = PI / 4
         let arcPath = UIBezierPath(arcCenter: center, radius: radius - arcWidth / 2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
@@ -86,11 +86,15 @@ class CounterView: UIView {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
         self.addSubview(label)
+        self.addSubview(medal)
+        medal.showMedal(false)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         label.center = CGPointMake(self.width / 2, self.height / 2)
+        medal.centerX = label.centerX
+        medal.top = label.centerY + min(self.width, self.height) / 2 - arcWidth
     }
     
     lazy var label : UILabel = {
@@ -99,6 +103,11 @@ class CounterView: UIView {
         label.textAlignment = .Center
         label.text = "0"
         return label
+    }()
+    
+    lazy var medal: MedalImageView = {
+        let view = MedalImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        return view
     }()
 
     required init?(coder aDecoder: NSCoder) {

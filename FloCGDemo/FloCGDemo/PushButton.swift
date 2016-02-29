@@ -17,6 +17,13 @@ class PushButton: UIButton {
     private var type: Type
     private var bgColor : UIColor
     
+    override var highlighted: Bool {
+        didSet {
+            super.highlighted  = highlighted
+            setNeedsDisplay()
+        }
+    }
+    
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         let path = UIBezierPath(ovalInRect: rect)
@@ -35,6 +42,18 @@ class PushButton: UIButton {
         }
         UIColor.whiteColor().setStroke()
         plusPath.stroke()
+        
+        if self.state == .Highlighted {
+            let context = UIGraphicsGetCurrentContext()
+            let startColor = UIColor.clearColor()
+            let endColor = UIColor.blackColor().colorWithAlphaComponent(0.15)
+            let colors = [startColor.CGColor, endColor.CGColor]
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
+            let colorLocations : [CGFloat] = [0.0, 1.0]
+            let gradient = CGGradientCreateWithColors(colorSpace, colors, colorLocations)
+            CGContextSetBlendMode(context, .Darken)
+            CGContextDrawRadialGradient(context, gradient, rect.center, 0.0, rect.center, rect.width/2, [])
+        }
     }
     
     init(frame: CGRect, type: Type = .Plus) {

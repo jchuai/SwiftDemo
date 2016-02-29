@@ -11,19 +11,19 @@ import UIKit
 
 class GraphView: UIView {
     
-    var graphPoints:[Int] = [] {
+    var graphPoints:[Int16] = [] {
         didSet {
             guard !graphPoints.isEmpty else {
                 return
             }
-            maxValue = graphPoints.maxElement()!
-            averageValue = Int((graphPoints.maxElement()! + graphPoints.minElement()!) / 2)
+            maxValue = max(graphPoints.maxElement()!, maxValue)
+            averageValue = Int16((graphPoints.maxElement()! + graphPoints.minElement()!) / 2)
             setupSubviews()
         }
     }
     
-    private var maxValue: Int = 0
-    private var averageValue: Int = 0
+    private var maxValue: Int16 = 8
+    private var averageValue: Int16 = 0
     private let margin : CGFloat = 20.0
     private let topBorder: CGFloat = 60.0
     private let bottomBorder: CGFloat = 50.0
@@ -114,6 +114,8 @@ class GraphView: UIView {
         topTagLabel.sizeToFit()
         bottomTagLabel.text = "\(0)"
         bottomTagLabel.sizeToFit()
+        
+        setNeedsDisplay()
     }
     
     override func layoutSubviews() {
@@ -126,7 +128,7 @@ class GraphView: UIView {
         averageLabel.left = margin
         
         topTagLabel.centerY = topBorder
-        topTagLabel.left = self.width - self.margin + 1
+        topTagLabel.left = self.width - self.margin + 5
         
         bottomTagLabel.centerY = self.height - bottomBorder
         bottomTagLabel.left = topTagLabel.left

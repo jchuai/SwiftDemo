@@ -13,12 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.loadDataItems()
+        
         self.view.addSubview(backgroundView)
         self.view.addSubview(containerView)
-        self.view.addSubview(medal)
-        medal.showMedal(true)
         containerView.addSubview(counterView)
-        graphView.graphPoints = [4, 2, 6, 4, 5, 8, 3]
+        counterView.counter = viewModel.todayCounter
+//        graphView.graphPoints = [4, 2, 6, 4, 5, 8, 3]
 
         self.view.addSubview(plusButton)
         self.view.addSubview(subtractButton)
@@ -40,13 +41,10 @@ class ViewController: UIViewController {
         let centerX  = self.view.width / 2
         
         containerView.centerX = centerX
-        containerView.centerY = 200
+        containerView.centerY = 150
         counterView.centerX = containerView.width / 2
         counterView.centerY = containerView.height / 2
         graphView.center = counterView.center
-        
-        medal.top = containerView.bottom + 20
-        medal.left = 0.0
         
         plusButton.centerX = centerX
         plusButton.centerY = self.view.height / 2 + 100
@@ -56,12 +54,25 @@ class ViewController: UIViewController {
     }
     
     func plus() {
+        if !displayingPrimary {
+            flip()
+        }
         counterView.counter++
+        viewModel.save(counterView.counter)
     }
     
     func subtract() {
+        if !displayingPrimary {
+            flip()
+        }
         counterView.counter--
+        viewModel.save(counterView.counter)
     }
+    
+    func reloadGraphView() {
+        graphView.graphPoints = viewModel.counters
+    }
+    
     private var displayingPrimary : Bool = true
     func flip() {
         UIView.transitionFromView(displayingPrimary ? counterView : graphView,
@@ -74,14 +85,15 @@ class ViewController: UIViewController {
                 }
             })
     }
+    
+    lazy var viewModel: ViewModel = {
+        let model = ViewModel()
+        model.delegate = self
+        return model
+    }()
 
     lazy var backgroundView: BackgroundView = {
         let view = BackgroundView(frame: CGRectZero)
-        return view
-    }()
-    
-    lazy var medal: MedalImageView = {
-        let view = MedalImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 200))
         return view
     }()
     
