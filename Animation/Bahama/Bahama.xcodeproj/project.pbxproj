@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE2350BA1C867E72004FC036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2350B91C867E72004FC036 /* AppDelegate.swift */; };
+		AE2350BC1C867E72004FC036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2350BB1C867E72004FC036 /* ViewController.swift */; };
+		AE2350BF1C867E72004FC036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2350BD1C867E72004FC036 /* Main.storyboard */; };
+		AE2350C21C867E72004FC036 /* Bahama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE2350C01C867E72004FC036 /* Bahama.xcdatamodeld */; };
+		AE2350C71C867E72004FC036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2350C51C867E72004FC036 /* LaunchScreen.storyboard */; };
+		AE2350CF1C867F00004FC036 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2350CE1C867F00004FC036 /* Images.xcassets */; };
+		AE2350D11C868C4D004FC036 /* UIView+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2350D01C868C4D004FC036 /* UIView+Geometry.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE2350B61C867E72004FC036 /* Bahama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bahama.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2350B91C867E72004FC036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE2350BB1C867E72004FC036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE2350BE1C867E72004FC036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE2350C11C867E72004FC036 /* Bahama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bahama.xcdatamodel; sourceTree = "<group>"; };
+		AE2350C61C867E72004FC036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE2350C81C867E72004FC036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2350CE1C867F00004FC036 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AE2350D01C868C4D004FC036 /* UIView+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Geometry.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE2350B31C867E72004FC036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE2350AD1C867E72004FC036 = {
+			isa = PBXGroup;
+			children = (
+				AE2350B81C867E72004FC036 /* Bahama */,
+				AE2350B71C867E72004FC036 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE2350B71C867E72004FC036 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE2350B61C867E72004FC036 /* Bahama.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE2350B81C867E72004FC036 /* Bahama */ = {
+			isa = PBXGroup;
+			children = (
+				AE2350D01C868C4D004FC036 /* UIView+Geometry.swift */,
+				AE2350CE1C867F00004FC036 /* Images.xcassets */,
+				AE2350B91C867E72004FC036 /* AppDelegate.swift */,
+				AE2350BB1C867E72004FC036 /* ViewController.swift */,
+				AE2350BD1C867E72004FC036 /* Main.storyboard */,
+				AE2350C51C867E72004FC036 /* LaunchScreen.storyboard */,
+				AE2350C81C867E72004FC036 /* Info.plist */,
+				AE2350C01C867E72004FC036 /* Bahama.xcdatamodeld */,
+			);
+			path = Bahama;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE2350B51C867E72004FC036 /* Bahama */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE2350CB1C867E72004FC036 /* Build configuration list for PBXNativeTarget "Bahama" */;
+			buildPhases = (
+				AE2350B21C867E72004FC036 /* Sources */,
+				AE2350B31C867E72004FC036 /* Frameworks */,
+				AE2350B41C867E72004FC036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bahama;
+			productName = Bahama;
+			productReference = AE2350B61C867E72004FC036 /* Bahama.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE2350AE1C867E72004FC036 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Junna;
+				TargetAttributes = {
+					AE2350B51C867E72004FC036 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = AE2350B11C867E72004FC036 /* Build configuration list for PBXProject "Bahama" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE2350AD1C867E72004FC036;
+			productRefGroup = AE2350B71C867E72004FC036 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE2350B51C867E72004FC036 /* Bahama */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE2350B41C867E72004FC036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2350CF1C867F00004FC036 /* Images.xcassets in Resources */,
+				AE2350C71C867E72004FC036 /* LaunchScreen.storyboard in Resources */,
+				AE2350BF1C867E72004FC036 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE2350B21C867E72004FC036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2350D11C868C4D004FC036 /* UIView+Geometry.swift in Sources */,
+				AE2350BC1C867E72004FC036 /* ViewController.swift in Sources */,
+				AE2350C21C867E72004FC036 /* Bahama.xcdatamodeld in Sources */,
+				AE2350BA1C867E72004FC036 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE2350BD1C867E72004FC036 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE2350BE1C867E72004FC036 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE2350C51C867E72004FC036 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE2350C61C867E72004FC036 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE2350C91C867E72004FC036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE2350CA1C867E72004FC036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE2350CC1C867E72004FC036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bahama/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.Bahama;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AE2350CD1C867E72004FC036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bahama/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.Bahama;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE2350B11C867E72004FC036 /* Build configuration list for PBXProject "Bahama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2350C91C867E72004FC036 /* Debug */,
+				AE2350CA1C867E72004FC036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE2350CB1C867E72004FC036 /* Build configuration list for PBXNativeTarget "Bahama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2350CC1C867E72004FC036 /* Debug */,
+				AE2350CD1C867E72004FC036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE2350C01C867E72004FC036 /* Bahama.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE2350C11C867E72004FC036 /* Bahama.xcdatamodel */,
+			);
+			currentVersion = AE2350C11C867E72004FC036 /* Bahama.xcdatamodel */;
+			path = Bahama.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AE2350AE1C867E72004FC036 /* Project object */;
+}
