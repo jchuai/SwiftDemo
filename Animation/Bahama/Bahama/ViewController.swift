@@ -138,7 +138,7 @@ class ViewController: UIViewController {
     }
     
     func animateCloud(cloud: UIView) {
-        let x = -self.view.width * CGFloat(drand48())
+        let x = -self.view.width * CGFloat(drand48()) - cloud.width
         let y = self.view.height * CGFloat(drand48()) * 0.6
         cloud.top = y
         cloud.left = x
