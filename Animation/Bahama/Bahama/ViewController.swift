@@ -163,10 +163,18 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animateWithDuration(0.5, delay: 0.4, options: [.CurveEaseInOut], animations: { () -> Void in
-            self.heading.center.x += self.view.bounds.width
-            }, completion: nil)
-        
+        let flyRight = CABasicAnimation(keyPath: "position.x")
+        flyRight.fromValue = -view.bounds.size.width/2
+        flyRight.toValue = view.bounds.size.width/2
+        flyRight.duration = 5
+        flyRight.removedOnCompletion = false
+//        flyRight.fillMode = kCAFillModeBackwards
+        flyRight.fillMode = kCAFillModeBoth
+        heading.layer.addAnimation(flyRight, forKey: nil)
+//        UIView.animateWithDuration(0.5, delay: 0.4, options: [.CurveEaseInOut], animations: { () -> Void in
+//            self.heading.center.x += self.view.bounds.width
+//            }, completion: nil)
+//        
         UIView.animateWithDuration(0.5, delay: 0.5, options: [], animations: { () -> Void in
             self.username.center.x += self.view.bounds.width
             }, completion: nil)
